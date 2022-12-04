@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem1 Demo</title>
+    <style>
+        h1{
+            margin: auto;
+            background-color: red;
+            text-align: right;
+            padding: 20px;
+         
+        }
+
+        .list-element-styling{
+            list-style-type: none;
+        }
+        .parent-menu{
+            background-color : grey;
+            list-style-type: none;
+            margin: 0%;
+            
+        }
+        .parent-menu > li{
+            display: inline-block;
+            padding: 0.75em;           
+        }
+
+        .parent-menu > li > a {
+           text-decoration: none;
+           color: white;
+           padding: 0.5em;
+        }
+
+        .parent-menu > li > a:hover {
+          background-color: black;
+        }
+
+        .item-containing-child-menu{
+            position:relative;
+        }
+        .child-menu,.child-menu-link3{
+            background-color : lightgrey;
+            list-style-type: none;
+            display: none;            
+            position:absolute;
+            top: 40px;
+            left: 0px;
+            white-space: nowrap;
+        }
+
+        .item-containing-child-menu:hover .child-menu{
+           display: block;
+        }
+
+        .child-menu > li > a {
+           text-decoration: none;
+           color: white;
+           padding: 0.75em;
+        }
+
+
+        .item-containing-child-menu-link3{
+            position:relative;
+        }
+
+
+        .child-menu-link3 > li > a {
+           text-decoration: none;
+           color: white;
+           padding: 0.75em;
+        }
+
+        .item-containing-child-menu-link3:hover .child-menu-link3{
+           display: block;
+        } 
+        
+        nav{
+            position: sticky;
+            top: 0%;
+            }
+       
+               
+    </style>
+</head>
+<body>
+<h1>Demo of Dropdown</h1> 
+    <nav>
+        <ul class="parent-menu list-element-styling">
+            <li><a href="">Link1</a></li> 
+            <li class="item-containing-child-menu"><a href="">Link2</a>             
+                <ul class="child-menu list-element-styling">
+                    <li><a href="">DD_Link_1</a></li>
+                    <li><a href="">DD_Link_2</a> </li>
+                    <li><a href="">DD_Link_3</a></li>
+                </ul>            
+            </li>
+            <li class="item-containing-child-menu-link3"><a href="">Link3</a>
+                <ul class="child-menu-link3 list-element-styling">
+                    <li><a href="">DD_Link_1</a></li>
+                    <li><a href="">DD_Link_2</a> </li>
+                    <li><a href="">DD_Link_3</a></li>
+                </ul>                     
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
